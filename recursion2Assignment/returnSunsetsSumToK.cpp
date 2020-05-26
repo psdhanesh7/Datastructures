@@ -12,32 +12,6 @@ For eg. Input : {1, 3, 4, 2} and K = 5, then output array should contain
 Don’t print the subsets, just save them in output.
 ***/
 
-// int subsetSumToK(int input[], int n, int output[][50], int k, int outputSize = 0) {
-//     // Write your code here
-
-//     if(k == 0) {
-//         output[outputSize][0] = 0;
-//         return outputSize + 1;
-//     }
-
-//     if(k < 0 || n == 0) {
-//         return outputSize;
-//     }
-
-//     int size = subsetSumToK(input, n-1, output, k-input[n-1], outputSize);
-//     for(int i = outputSize; i < outputSize + size; i++) {
-
-//         int subsetSize = output[i][0];
-//         output[i][subsetSize] = input[n-1];
-//         output[i][0] = subsetSize + 1;
-//     }
-
-//     size  = subsetSumToK(input, n-1, output, k, outputSize + size);
-
-//     return size;
-
-// }
-
 int subsetSumToK(int input[], int n, int output[][50], int k) {
     // Write your code here
 
