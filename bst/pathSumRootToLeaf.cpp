@@ -58,19 +58,19 @@ BinaryTreeNode<int>* takeInput() {
     return root;
 }
 
-void rootToLeafPathsSumToK(BinaryTreeNode<int> *root, int k, int sum = 0, string path = "") {
+void rootToLeafPathsSumToK(BinaryTreeNode<int> *root, int k, string path = "") {
     // Write your code here
 	if(root == NULL) {
 		return;
 	}
-
-	if(root->left == NULL && root->right == NULL && sum == k) {
-		cout << path << endl;
+	
+	if(root->left == NULL && root->right == NULL && k == root->data) {
+		cout << path << root->data << endl;
 		return ;
 	}
 
-	rootToLeafPathsSumToK(root->left, k, sum + root->data, path + to_string(root->data) + " ");
-	rootToLeafPathsSumToK(root->right, k, sum + root->data, path + to_string(root->data) + " ");
+	rootToLeafPathsSumToK(root->left, k - root->data, path + to_string(root->data) + " ");
+	rootToLeafPathsSumToK(root->right, k - root->data, path + to_string(root->data) + " ");
 
 }
 
