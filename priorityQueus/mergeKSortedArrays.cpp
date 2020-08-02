@@ -74,6 +74,10 @@ int main() {
 	for(int i = 0; i < output.size(); i++)
 		cout << output[i] << " ";
 	
+	for(int i = 0; i < input.size(); i++) {
+		delete input[i];
+	}
+
 	return 0;
 }
 
