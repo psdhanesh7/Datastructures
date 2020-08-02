@@ -38,6 +38,10 @@ class PriorityQueue {
 	}
 
 	int removeMax() {
+		
+		if(pq.size() == 0) {
+			return INT_MIN;
+		}
 
 		int maxElement = pq[0];
 		pq[0] = pq[pq.size() - 1];
@@ -69,3 +73,7 @@ class PriorityQueue {
 		return maxElement;
 	}
 };
+
+
+
+
