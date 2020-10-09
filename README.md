@@ -1,1 +1,3 @@
-Basic datastructures program
+## Basic datastructures program
+
+Data structure is a data organization, management, and storage format that enables efficient access and modification. More precisely, a data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data. This repository contains some of the basic data strutures like Hash, Linked List, Stacks, Queues etc....
